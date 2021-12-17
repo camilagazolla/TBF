@@ -1,8 +1,10 @@
+I have added some [example FASTQ files](https://github.com/camilagazolla/Trial-By-Fire/tree/main/example_data) here for reproducibility. 😀
+
 ## Creating plots to inspect read quality profiles
 
 Can consume 🐡
 
-- [FASTQ files](https://github.com/camilagazolla/x)
+- [FASTQ files](https://github.com/camilagazolla/Trial-By-Fire/tree/main/example_data)
 
 Can provide 🍣
 
@@ -11,6 +13,26 @@ Can provide 🍣
 **On R:**
 
 ``` 
-library(DECIPHER) 
+# path to folder containing the reads (decompressed FASTQ)
+path <- "C:/Users/pedro/Desktop/Trial_by_fire/example_data"
+
+############## END PARAMETER SELECTION 
+
 library(dada2)
+
+setwd(path)
+
+# create "quality" folder on path
+dir.create("quality") 
+
+# file parsing
+fns <- sort(list.files(pattern=".fastq"))
+
+# plot quality profile for each FASTQ
+for (i in unique(fns)){
+  png(paste0(path, "/quality/", gsub(".fastq","", i), "_quality.png"))
+  print(plotQualityProfile(i))
+  dev.off()
+}
+
 ``` 
