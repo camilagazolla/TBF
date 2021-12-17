@@ -1,0 +1,16 @@
+## Creating plots to inspect read quality profiles
+
+Can consume 🐡
+
+- [FASTQ files](https://github.com/camilagazolla/x)
+
+Can provide 🍣
+
+- [Table](https://github.com/camilagazolla/x) with taxonomic assignments from order to genus
+
+**On R:**
+
+``` 
+library(DECIPHER) 
+library(dada2)
+``` 
