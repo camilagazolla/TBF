@@ -1,0 +1,10 @@
+
+	Spearman's rank correlation rho
+
+data:  test$Axis.1 and test$Lactobacillus
+S = 1512, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.9534898 
+
