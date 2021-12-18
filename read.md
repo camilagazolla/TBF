@@ -1,6 +1,4 @@
 > ###   Q1
-> **Interpret the plot below. What can be said about the overall quality of sequencing run used to generate this figure?**
-> <img src="https://github.com/camilagazolla/Trial-By-Fire/blob/main/quality_scores_example.png" width="50%" height="50%">
 <br>
 
 This representation is used to inspect the read quality scores. The median score in each position (red line) is shown, as well as the quartiles of the score distribution (yellow bars), and the mean score (blue line). The quality decays especially at the end, which is common when sequencing using an Illumina platform. 
@@ -55,10 +53,7 @@ Figure. Quality profiles using plotQualityProfile function.
 <br><br>
 
 >###   Q2
->**Generate a tab delimited table summarizing the read counts for all of the samples in the “fastas” folder. There should be a “SampleID” column and a read count column. Use what ever approach you prefer, but bonus point will be given for making a simple loop and using grep. Explain what you did and provide any accompanying code with comments.**
-
 <br>
-
 
 To complete the task I have employed fuctions from the Biostrings R package. This package contains classes and functions for representing biological strings such as DNA, RNA and amino acids. The result table is available at the link bellow.
 
@@ -120,7 +115,6 @@ Differently from FASTA, FASTQ has a standardized way of encoding quality scores 
 <br><br>
 
 >###   Q4
->**Get the first 10 bases of each read in sample “CVM382” found within the “fasta” directory. What 10 base strings repeats the most and what is its frequency? Explain what you did and provide any accompanying code with comments.**
 <br>
 
 A total of 34 different 10 base DNA strings were obtained from the total 1733 sequences. The most frequent was TGGTGTCAGC	(59.66%, 1034 counts), followed by TGGTGCCAGC (664 counts), TGTGTCAGCC (3 counts) and TGTGCCAGCC (2 counts).
@@ -170,7 +164,6 @@ write.table(CVM382Subseq.df, "CVM382Freq.tab", sep = "\t", row.names = FALSE, qu
 <br><br>
 
 >###   Q5
->**Samples found in the “fasta” directory originated from an amplicon-sequencing run. Can you identify the amplicon/gene that was sequenced (hint: try BLASTing a few random reads)? Are we using these samples to study Bacteria, Fungi or viruses? Explain.**
 <br>
 
 I have aligned a complete 16S rRNA sequence (J01859.1) with some reads using EMBOSS merger ([result here!](https://github.com/camilagazolla/Trial-By-Fire/blob/main/EMBOSS_output.txt)). The amplicon represents the 16S rRNA V4 region because i) it presents a length of 300 bp, and ii) it is aligned next to the position of the widely used primers 515F and 806R.
@@ -179,7 +172,6 @@ I have aligned a complete 16S rRNA sequence (J01859.1) with some reads using EMB
 
 
 >###   Q6
->**Many of the ongoing projects in our lab focus on the study of the human microbiome. In the field of microbiome what is meant by alpha diversity?**
 <br>
 
 A “diversity index” is a mathematical measure of the diversity of species in a community.  The  “alpha diversity” represents the diversity applicable to a single sample, comprising “richness” and “evenness ”.  
@@ -193,7 +185,6 @@ I have been employing only alpha diversity indices that are towards evenness mea
 
 
 >###   Q7
->**What is the difference between Shannon and Chao1 alpha diversity measures? **
 <br>
 
 - Chao1 is a a measure of richness, which gives more weight to rare species. As previouly explained, the presence of sequencing errors make this measure less suitable for characterizing communities.
@@ -205,7 +196,6 @@ I have been employing only alpha diversity indices that are towards evenness mea
 
 
 >###   Q8
->**Is there a statistically significant correlation between the *Lactobacillus* and Axis.1 column found in “test.csv”? Which statistical test did you use?**
 <br>
 
 
