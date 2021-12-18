@@ -105,7 +105,6 @@ write.table(df, "read_counts.tab", sep = "\t", row.names = FALSE, quote = FALSE)
 <br><br>
 
 >###   Q3
->**What is a fasta? Is it different from fastq? If so, how?**
 <br>
 
 FASTA and FASTQ are both text archives that hold sequence data and metadata. The FASTQ files are generally used for storing the data from NGS experiments, while the FASTA files are generally used to store reference data.
@@ -166,7 +165,7 @@ write.table(CVM382Subseq.df, "CVM382Freq.tab", sep = "\t", row.names = FALSE, qu
 >###   Q5
 <br>
 
-I have aligned a complete 16S rRNA sequence (J01859.1) with some reads using EMBOSS merger ([result here!](https://github.com/camilagazolla/Trial-By-Fire/blob/main/EMBOSS_output.txt)). The amplicon represents the 16S rRNA V4 region because i) it presents a length of 300 bp, and ii) it is aligned next to the position of the widely used primers 515F and 806R.
+I have aligned a complete 16S rRNA sequence (J01859.1) with some reads using EMBOSS merger ([result here!](https://github.com/camilagazolla/Trial-By-Fire/blob/main/EMBOSS_output.txt)). The amplicon represents the 16S rRNA V4 region because i) it presents a length of 300 bp, and ii) it is aligned next to the position of the widely used primers 515F and 806R. The 16S rRNA V4 region is a popular target for metabarcoding of Bacteria, however, Archaea sequences could also be present.
 
 <br><br>
 
